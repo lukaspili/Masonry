@@ -176,6 +176,23 @@
     return [self addConstraintWithAttributes:MASAttributeCenterX | MASAttributeCenterY];
 }
 
+- (MASConstraint *)fillFromTop {
+    return [self addConstraintWithAttributes:MASAttributeTop | MASAttributeLeft | MASAttributeRight];
+}
+
+- (MASConstraint *)fillFromBottom {
+    return [self addConstraintWithAttributes:MASAttributeBottom | MASAttributeLeft | MASAttributeRight];
+}
+
+- (MASConstraint *)fillHorizontally {
+    return [self addConstraintWithAttributes:MASAttributeLeft | MASAttributeRight];
+}
+
+- (MASConstraint *)fillVertically {
+    return [self addConstraintWithAttributes:MASAttributeTop | MASAttributeBottom];
+}
+
+
 #pragma mark - grouping
 
 - (MASConstraint *(^)(dispatch_block_t group))group {

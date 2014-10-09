@@ -74,6 +74,13 @@ typedef NS_OPTIONS(NSInteger, MASAttribute) {
  */
 @property (nonatomic, strong, readonly) MASConstraint *center;
 
+
+// added
+- (MASConstraint *)fillFromTop;
+- (MASConstraint *)fillFromBottom;
+- (MASConstraint *)fillHorizontally;
+- (MASConstraint *)fillVertically;
+
 /**
  *  Whether or not to check for an existing constraint instead of adding constraint
  */
